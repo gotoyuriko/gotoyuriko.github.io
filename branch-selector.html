@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branch Selector | Visual Designer -Yuriko Goto</title>
+  <link rel="icon" href="./assets/img/logo.png" type="image/png" sizes="128x128">
+  <link rel="stylesheet" href="./assets/style.css">
+  <style>
+    .branch-selector {
+      background: #F3EEE8;
+      min-height: 100vh;
+      padding: 150px 50px 50px;
+      font-family: 'made_sunflower', sans-serif;
+    }
+    .branch-selector h1 {
+      font-size: 60px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .branch-selector p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .branch-list {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .branch-list h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .branch-item {
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .branch-item:hover {
+      background-color: #f9f9f9;
+    }
+    .branch-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .branch-date {
+      font-size: 16px;
+      color: #666;
+    }
+    .branch-button {
+      background-color: #B60033;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .branch-button:hover {
+      background-color: #8c0028;
+    }
+    .current-branch {
+      background-color: #f0f8ff;
+      border-left: 4px solid #B60033;
+    }
+    .dev-branch {
+      background-color: #f0fff0;
+      border-left: 4px solid #006400;
+    }
+    .note {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="./index.html"><img src="./assets/img/logo.png" alt="LOGO" class="logo"></a>
+    <span class="burger-button">&equals;</span>
+    <a href="./login.html" class="btn">Log In</a>
+  </header>
+
+  <!-- BRANCH SELECTOR -->
+  <section class="branch-selector">
+    <h1>Website Version Selector</h1>
+    <p>Select which version of the website you would like to view.</p>
+    
+    <div class="branch-list">
+      <h2>Available Versions</h2>
+      
+      <!-- This section would be dynamically generated based on available branches -->
+      <div class="branch-item current-branch">
+        <div>
+          <div class="branch-name">Current Edition (master)</div>
+          <div class="branch-date">Latest version</div>
+        </div>
+        <a href="index.html" class="branch-button">View</a>
+      </div>
+      
+      <!-- Example of an archived branch -->
+      <div class="branch-item">
+        <div>
+          <div class="branch-name">Archive Edition</div>
+          <div class="branch-date">Created: <span class="archive-date">YYYY-MM-DD</span></div>
+        </div>
+        <button class="branch-button archive-link" disabled>View</button>
+      </div>
+      
+    </div>
+    
+    <p class="note">Note: This page is for demonstration purposes. In a real implementation, 
+      you would need server-side code to list and access different Git branches.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-content">
+        <ul class="footer-info">
+          <li>
+            <h1>Yuriko Goto</h1>
+          </li>
+          <li><a href="https://www.instagram.com/yuri.doodle/" target="_blank">INSTAGRAM</a></li>
+          <li><a href="mailto:gotoyuriko95@gmail.com" target="_blank">GOTOYURIKO@GMAIL.COM</a></li>
+        </ul>
+        <ul class=footer-menu>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="open-commission.html">OPEN COMMISSION</a></li>
+          <li><a href="goods.html">GOODS</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="copy-right">
+        <p> &copy; COPYRIGHT YURIKO GOTO</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/main.js"></script>
+  <script>
+    // This would be replaced with actual code to fetch branch information
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set today's date as an example
+      const today = new Date();
+      const dateString = today.toISOString().split('T')[0];
+      document.querySelector('.archive-date').textContent = dateString;
+    });
+  </script>
+</body>
+
+</html>
