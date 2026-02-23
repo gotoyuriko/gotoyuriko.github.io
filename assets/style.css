@@ -1362,3 +1362,458 @@ footer{
   color: white;
   background: #000000;
 }
+
+
+
+
+/* ====================================================== RESPONSIVE: TABLET (max-width: 1024px) ====================================================== */
+@media (max-width: 1024px) {
+
+  /* Header */
+  header {
+    width: 90%;
+  }
+
+  /* Hero */
+  .hero-content h2 { font-size: 60px; line-height: 65px; }
+  .hero-content h3 { font-size: 32px; line-height: 60px; }
+
+  /* About / Gallery sections */
+  .about-content,
+  .gallery-content {
+    width: 45%;
+  }
+  .about-content h2,
+  .gallery-content h2 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+
+  /* Plan */
+  .plan-content h2 { font-size: 60px; }
+  .plan-content ul { margin-top: 100px; }
+
+  /* Info */
+  .info-btn,
+  .info-btn2 { width: 80%; max-width: 400px; }
+
+  /* Footer */
+  .footer-content { width: 75%; }
+  .footer-info h1 { font-size: 48px; }
+
+  /* Goods */
+  #goods h2 { font-size: 60px; }
+  .goods-grid-container { width: 80%; grid-gap: 60px 60px; }
+  .goods-grid-item p { font-size: 40px; }
+
+  /* Yuri Gallery */
+  #yuri-gallery h2 { font-size: 60px; }
+  .gallery-grid-container {
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 250px;
+    grid-gap: 40px;
+  }
+
+  /* News/Events */
+  #inside-community h2 { font-size: 60px; }
+  .newsevent > h3 { font-size: 32px; }
+  .newsevent-grid-container { margin: auto 3%; grid-gap: 40px; }
+  .newsevent-grid-item p { font-size: 40px; }
+
+  /* Commission */
+  .commission-cotainer > h2 { font-size: 48px; }
+  .commission-1 img { width: 380px; }
+  .commission-2 img { width: 420px; }
+  .commission-3 img { width: 380px; }
+
+  /* Skill */
+  .skill-content { width: 60%; }
+
+  /* About Me page */
+  .aboutMe-title h2 { font-size: 60px; }
+  .aboutMe-content img { width: 25%; height: auto; }
+  .aboutMe-description { width: 45%; }
+
+  /* Community */
+  #community h2 { font-size: 48px; }
+  #community h3 { font-size: 24px; }
+  .community-classify h1 { font-size: 40px; }
+}
+
+
+
+
+/* ====================================================== RESPONSIVE: MOBILE (max-width: 768px) ====================================================== */
+@media (max-width: 768px) {
+
+  /* Fix parallax on mobile (background-attachment:fixed breaks on iOS) */
+  .parallax-bg,
+  #community,
+  #background,
+  #skill,
+  #facebook-community {
+    background-attachment: scroll;
+  }
+
+  /* ---- Burger / Overlay Menu ---- */
+  .overlay-menu {
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .overlay-menu a,
+  .overlay-access a {
+    font-size: 26px;
+  }
+  .overlay-access {
+    width: 70%;
+    margin-top: 30px;
+  }
+  .closebtn { font-size: 100px; }
+
+  /* ---- Header ---- */
+  .logo { width: 110px; }
+  .burger-button { font-size: 80px; }
+  header { width: 92%; height: auto; padding: 12px 0; }
+
+  /* ---- Hero ---- */
+  .hero-content { left: 5%; right: 5%; width: 90%; }
+  .hero-content h2 { font-size: 42px; line-height: 48px; }
+  .hero-content h3 { font-size: 22px; line-height: 40px; }
+
+  /* ---- About (homepage section) ---- */
+  .about-content {
+    width: 85%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
+  .about-content h2 { font-size: 42px; line-height: 48px; }
+  .about-click {
+    width: 85%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
+
+  /* ---- Gallery (homepage section) ---- */
+  .gallery-content {
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .gallery-content h2 { font-size: 42px; line-height: 48px; }
+  .gallery-click {
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* ---- Plan ---- */
+  .plan-content h2 { font-size: 42px; margin: 40px 20px; }
+  .plan-content ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+  .plan-content li {
+    width: 160px;
+    height: 160px;
+    padding: 60px;
+  }
+  .plan-content h3 { font-size: 22px; margin-top: 60px; }
+  .plan-content p { font-size: 14px; margin: 20px; }
+  #plan { height: auto; padding-bottom: 60px; }
+
+  /* ---- Info ---- */
+  .info-row { flex-direction: column; }
+  .info-col { flex: none; }
+  .info-conatct { height: auto; padding-bottom: 60px; }
+  .info-conatct h2 { font-size: 48px; padding: 40px 20px 20px; }
+  .info-conatct p { font-size: 18px; padding: 20px; }
+  .info-conatct > img { width: 50%; }
+  .info-btn,
+  .info-btn2 {
+    width: 80%;
+    max-width: none;
+    padding: 20px;
+    margin: 10px auto;
+  }
+  .info-btn a,
+  .info-btn2 a { font-size: 20px; }
+  .info-ycstudio { height: auto; padding-bottom: 60px; }
+  .info-ycstudio > img { width: 70%; padding: 40px; }
+  .info-ycstudio p { font-size: 18px; padding: 20px; }
+  .info-2logos > img { width: 45%; }
+  #info { height: auto; }
+
+  /* ---- Footer ---- */
+  footer { height: auto; padding-bottom: 60px; }
+  .footer-wrap { position: static; padding-top: 60px; }
+  .footer-content {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer-info h1 { font-size: 36px; }
+  .footer-info a,
+  .footer-menu a { font-size: 16px; padding-left: 30px; }
+  .footer-menu { padding-top: 0; }
+  .copy-right p { font-size: 20px; margin-top: 40px; }
+
+  /* ---- Goods ---- */
+  #goods h2 { font-size: 42px; padding-top: 15%; }
+  .goods-grid-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    padding: 8% 5%;
+    grid-gap: 40px;
+  }
+  .goods-grid-item p { font-size: 36px; }
+
+  /* ---- Yuri Gallery ---- */
+  #yuri-gallery h2 { font-size: 42px; }
+  .gallery-grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 5%;
+    grid-gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* ---- News/Events ---- */
+  #inside-community h2 { font-size: 42px; }
+  #inside-community p { font-size: 16px; }
+  .newsevent > h3 { font-size: 28px; }
+  .newsevent-grid-container {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin: auto 5%;
+  }
+  .newsevent-grid-item p { font-size: 36px; }
+
+  /* ---- Facebook Community ---- */
+  #facebook-community h2 { font-size: 36px; top: 15%; }
+  #facebook-community a { width: 60%; top: 60%; }
+
+  /* ---- Contact Form ---- */
+  #contactForm { padding: 15% 5% 10%; }
+  .contactForm-contain { padding: 6%; }
+  .contactForm-contain h2 { font-size: 28px; letter-spacing: 4px; }
+  .contactForm-contain p { margin-bottom: 40px; }
+  .contactForm-name { flex-direction: column; }
+  .firstName,
+  .lastName { width: 100%; padding-right: 0; }
+  .contactForm-Country select { width: 100%; }
+
+  /* ---- Login ---- */
+  .login-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+  }
+  .login-content h1 { font-size: 48px; line-height: 52px; }
+  .submit-btn input[type="submit"] { width: 60%; }
+
+  /* ---- Sign Up ---- */
+  .signup-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+  }
+  .signup-content h1 { font-size: 48px; line-height: 52px; }
+
+  /* ---- About Me page ---- */
+  #aboutMe { height: auto; padding-bottom: 60px; }
+  .aboutMe-title { padding-top: 15%; }
+  .aboutMe-title h2 { font-size: 48px; }
+  .aboutMe-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .aboutMe-content img {
+    width: 50%;
+    height: auto;
+  }
+  .aboutMe-description { width: 85%; }
+  .aboutMe-desTitle h3 { font-size: 36px; }
+  .aboutMe-desTitle a { font-size: 22px; }
+
+  /* ---- Background / Timeline ---- */
+  #background { height: auto; min-height: 100vh; }
+  .background-content {
+    position: static;
+    transform: none;
+    padding: 80px 5% 40px;
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+  }
+  .background-content h2 { font-size: 36px; margin-bottom: 10px; }
+  .timeline-list-item { flex-direction: column; }
+  .timeline-list-item .date {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .timeline-list-item .timeline-description {
+    width: 100%;
+    padding: 0 10px 40px 20px;
+  }
+
+  /* ---- Skill ---- */
+  #skill { height: auto; min-height: 100vh; }
+  .skill-content {
+    position: static;
+    transform: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 5% 40px;
+    right: auto;
+  }
+  .skill-content h2 { font-size: 36px; }
+  .skill-title h3 { font-size: 22px; }
+  .skill-1 img, .skill-2 img { margin-left: 20px; }
+  .skill-3 i { margin-left: 20px; }
+
+  /* ---- Commission ---- */
+  .commission-cotainer > h2 { font-size: 36px; }
+  .commission-cotainer ul {
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 8%;
+  }
+  .commission-1 img,
+  .commission-2 img,
+  .commission-3 img {
+    width: 100%;
+    max-width: 340px;
+    padding: 0;
+  }
+  .commission-description h3 { font-size: 28px; }
+  .commission-description p { width: 100%; }
+
+  /* ---- Community ---- */
+  #community h2 { font-size: 36px; }
+  #community h3 { font-size: 20px; }
+  .community-classify h1 { font-size: 34px; }
+  .community-1,
+  .community-2,
+  .community-3 {
+    flex-direction: column;
+    align-items: center;
+    padding: 8%;
+    gap: 30px;
+  }
+  .community-1 img,
+  .community-2 img,
+  .community-3 img {
+    padding: 0;
+    max-width: 280px;
+    width: 80%;
+  }
+  #check-community {
+    height: auto;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+  #check-community p { font-size: 20px; }
+}
+
+
+
+
+/* ====================================================== RESPONSIVE: SMALL MOBILE (max-width: 480px) ====================================================== */
+@media (max-width: 480px) {
+
+  /* Overlay Menu */
+  .overlay-menu a,
+  .overlay-access a { font-size: 22px; }
+  .overlay-access { width: 85%; }
+
+  /* Header */
+  .logo { width: 90px; }
+  .burger-button { font-size: 60px; }
+
+  /* Hero */
+  .hero-content h2 { font-size: 32px; line-height: 38px; }
+  .hero-content h3 { font-size: 18px; line-height: 32px; }
+
+  /* About/Gallery homepage sections */
+  .about-content h2,
+  .gallery-content h2 { font-size: 32px; line-height: 38px; }
+
+  /* Plan */
+  .plan-content h2 { font-size: 32px; }
+  .plan-content li { width: 130px; height: 130px; padding: 50px; }
+  .plan-content h3 { font-size: 18px; margin-top: 45px; }
+
+  /* Info */
+  .info-conatct h2 { font-size: 36px; }
+  .info-btn,
+  .info-btn2 { width: 90%; }
+
+  /* Footer */
+  .footer-info h1 { font-size: 28px; }
+  .copy-right p { font-size: 16px; }
+
+  /* Goods */
+  #goods h2 { font-size: 32px; }
+  .goods-grid-item p { font-size: 26px; }
+
+  /* Gallery */
+  .gallery-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* News/Events */
+  #inside-community h2 { font-size: 32px; }
+  .newsevent-grid-item p { font-size: 26px; }
+
+  /* Facebook Community */
+  #facebook-community h2 { font-size: 26px; }
+  #facebook-community a { width: 75%; }
+
+  /* Contact Form */
+  .contactForm-contain h2 { font-size: 22px; letter-spacing: 2px; }
+
+  /* Login / Signup */
+  .login-content h1,
+  .signup-content h1 { font-size: 36px; line-height: 42px; }
+
+  /* About Me */
+  .aboutMe-title h2 { font-size: 36px; }
+  .aboutMe-content img { width: 65%; }
+  .aboutMe-desTitle h3 { font-size: 28px; }
+
+  /* Background/Timeline */
+  .background-content h2 { font-size: 28px; }
+
+  /* Skill */
+  .skill-content h2 { font-size: 28px; }
+  .skill-title h3 { font-size: 18px; }
+
+  /* Commission */
+  .commission-cotainer > h2 { font-size: 28px; }
+  .commission-description h3 { font-size: 22px; }
+
+  /* Community */
+  #community h2 { font-size: 28px; }
+  .community-classify h1 { font-size: 26px; }
+  #check-community p { font-size: 17px; }
+}
