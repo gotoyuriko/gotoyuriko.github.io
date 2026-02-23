@@ -1478,37 +1478,55 @@ footer{
   header { width: 92%; height: auto; padding: 12px 0; }
 
   /* ---- Hero ---- */
-  .hero-content { left: 5%; right: 5%; width: 90%; }
+  #hero {
+    background-position: bottom center;
+    background-size: auto 40%;
+  }
+  .hero-content { left: 5%; right: 5%; width: 90%; top: 18%; transform: none; }
   .hero-content h2 { font-size: 42px; line-height: 48px; }
   .hero-content h3 { font-size: 22px; line-height: 40px; }
 
   /* ---- About (homepage section) ---- */
+  #about {
+    background-position: bottom center;
+    background-size: auto 40%;
+  }
   .about-content {
     width: 85%;
     right: 50%;
-    transform: translate(50%, -50%);
+    top: 12%;
+    transform: translate(50%, 0);
     text-align: center;
   }
   .about-content h2 { font-size: 42px; line-height: 48px; }
   .about-click {
     width: 85%;
     right: 50%;
-    transform: translate(50%, -50%);
+    top: auto;
+    bottom: 8%;
+    transform: translate(50%, 0);
     text-align: center;
   }
 
   /* ---- Gallery (homepage section) ---- */
+  #gallery {
+    background-position: bottom center;
+    background-size: auto 40%;
+  }
   .gallery-content {
     width: 85%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 12%;
+    transform: translate(-50%, 0);
     text-align: center;
   }
   .gallery-content h2 { font-size: 42px; line-height: 48px; }
   .gallery-click {
     width: 85%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: auto;
+    bottom: 8%;
+    transform: translate(-50%, 0);
     text-align: center;
   }
 
@@ -1750,10 +1768,13 @@ footer{
   .burger-button { font-size: 60px; }
 
   /* Hero */
+  #hero { background-size: auto 35%; }
+  .hero-content { top: 16%; }
   .hero-content h2 { font-size: 32px; line-height: 38px; }
   .hero-content h3 { font-size: 18px; line-height: 32px; }
 
   /* About/Gallery homepage sections */
+  #about, #gallery { background-size: auto 35%; }
   .about-content h2,
   .gallery-content h2 { font-size: 32px; line-height: 38px; }
 
