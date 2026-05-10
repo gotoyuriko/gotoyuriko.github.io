@@ -21,6 +21,14 @@
   font-family: 'made_sunflower', sans-serif;
   font-weight: normal;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 .btn{
   color: #000000;
   text-decoration: none;
@@ -373,7 +381,8 @@ li:nth-child(3) .plan-overlay{
 /* ====================================================== INFO ====================================================== */
 #info{
   width: 100%;
-  height: 100vh;
+  height: auto;
+  overflow: visible;
 }
 .info-row {
   display: flex;
@@ -389,7 +398,8 @@ li:nth-child(3) .plan-overlay{
 }
 .info-conatct {
   background: #FEE699;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 60px;
   text-align: center;
 }
 .info-conatct h2{
@@ -402,7 +412,9 @@ li:nth-child(3) .plan-overlay{
   padding: 50px;
 }
 .info-conatct>img{
-  width: 25%;
+  width: 15%;
+  max-height: 35vh;
+  object-fit: contain;
 }
 .info-btn{
   position: relative;
@@ -487,21 +499,22 @@ footer{
 }
 .footer-content{
   margin: auto;
-  width: 50%;
+  width: 65%;
   display: flex;
   justify-content: space-between;
 }
 .footer-info li{
   list-style: none;
-  padding: 25px;
+  padding: 10px 0;
   text-align: left;
 }
 .footer-info h1{
   font-size: 60px;
   color: #B60033;
+  white-space: nowrap;
 }
 .footer-info a{
-  padding-left: 50px;
+  padding-left: 0;
   color: #B60033;
   font-size: 20px;
   text-decoration: none;
@@ -516,7 +529,7 @@ footer{
   text-align: left;
 }
 .footer-menu a{
-  padding-left: 50px;
+  padding-left: 0;
   color: #B60033;
   font-size: 20px;
   text-decoration: none;
@@ -883,7 +896,7 @@ footer{
 .contactForm-contain input[type="email"],
 .contactForm-contain input[type="tel"]{
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 0;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
@@ -908,7 +921,8 @@ footer{
 }
 .contactForm-Country select{
   width: 50%;
-  padding: 16px 20px;
+  padding: 16px 40px 16px 16px;
+  box-sizing: border-box;
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
@@ -1346,8 +1360,13 @@ footer{
   justify-content: space-evenly;
   align-items: center;
 }
+#check-community h2{
+  text-align: center !important;
+  width: 100%;
+}
 #check-community p{
   font-size: 25px;
+  text-align: center;
 }
 #check-community a{
   font-size: 20px;
@@ -1455,12 +1474,16 @@ footer{
     background-attachment: scroll;
   }
 
+  /* Fix background image cropping on portrait mobile */
+  #hero    { background-position: 80% center; }
+  #about   { background-position: 25% center; }
+  #gallery { background-position: 80% center; }
+
   /* ---- Burger / Overlay Menu ---- */
   .overlay-menu {
     width: 85%;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
   .overlay-menu a,
   .overlay-access a {
@@ -1480,37 +1503,64 @@ footer{
   /* ---- Hero ---- */
   .hero-content { left: 5%; right: 5%; width: 90%; }
   .hero-content h2 { font-size: 42px; line-height: 48px; }
-  .hero-content h3 { font-size: 22px; line-height: 40px; }
+  .hero-content h3 {
+    font-size: 22px; line-height: 40px;
+    text-shadow: 0 0 8px rgba(243,238,232,1), 0 0 16px rgba(243,238,232,1);
+  }
 
   /* ---- About (homepage section) ---- */
   .about-content {
-    width: 85%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
+    width: 80%;
+    left: 5%;
+    right: auto;
+    top: 80px;
+    transform: none;
+    text-align: left;
   }
-  .about-content h2 { font-size: 42px; line-height: 48px; }
+  .about-content h2 {
+    font-size: 42px;
+    line-height: 48px;
+    text-shadow: 0 0 12px rgba(243,238,232,1), 0 0 24px rgba(243,238,232,0.9);
+  }
+  .about-content p {
+    text-shadow: 0 0 8px rgba(243,238,232,1), 0 0 16px rgba(243,238,232,0.9);
+  }
   .about-click {
-    width: 85%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
+    width: 60%;
+    left: auto;
+    right: 5%;
+    top: auto;
+    bottom: 5%;
+    transform: none;
+    text-align: right;
   }
+  .about-click img { max-width: 100%; }
 
   /* ---- Gallery (homepage section) ---- */
   .gallery-content {
-    width: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 80%;
+    left: 5%;
+    top: 80px;
+    transform: none;
+    text-align: left;
   }
-  .gallery-content h2 { font-size: 42px; line-height: 48px; }
+  .gallery-content h2 {
+    font-size: 42px;
+    line-height: 48px;
+    text-shadow: 0 0 12px rgba(243,238,232,1), 0 0 24px rgba(243,238,232,0.9);
+  }
+  .gallery-content p {
+    text-shadow: 0 0 8px rgba(243,238,232,1), 0 0 16px rgba(243,238,232,0.9);
+  }
   .gallery-click {
-    width: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 60%;
+    left: 5%;
+    top: auto;
+    bottom: 5%;
+    transform: none;
+    text-align: left;
   }
+  .gallery-click img { max-width: 100%; }
 
   /* ---- Plan ---- */
   .plan-content h2 { font-size: 42px; margin: 40px 20px; }
@@ -1539,13 +1589,16 @@ footer{
   .info-conatct > img { width: 50%; }
   .info-btn,
   .info-btn2 {
-    width: 80%;
-    max-width: none;
-    padding: 20px;
-    margin: 10px auto;
+    position: static;
+    display: block;
+    width: max-content;
+    padding: 14px 32px;
+    margin: 20px auto 40px;
   }
   .info-btn a,
-  .info-btn2 a { font-size: 20px; }
+  .info-btn2 a { font-size: 18px; }
+  .info-btn img,
+  .info-btn2 img { width: 18px; height: 18px; margin-left: 10px; }
   .info-ycstudio { height: auto; padding-bottom: 60px; }
   .info-ycstudio > img { width: 70%; padding: 40px; }
   .info-ycstudio p { font-size: 18px; padding: 20px; }
@@ -1562,13 +1615,15 @@ footer{
     gap: 30px;
   }
   .footer-info h1 { font-size: 36px; }
+  .footer-info li,
+  .footer-menu li { padding: 6px 0; }
   .footer-info a,
-  .footer-menu a { font-size: 16px; padding-left: 30px; }
+  .footer-menu a { font-size: 16px; padding-left: 0; }
   .footer-menu { padding-top: 0; }
   .copy-right p { font-size: 20px; margin-top: 40px; }
 
   /* ---- Goods ---- */
-  #goods h2 { font-size: 42px; padding-top: 15%; }
+  #goods h2 { font-size: 42px; padding-top: 120px; }
   .goods-grid-container {
     width: 90%;
     grid-template-columns: 1fr;
@@ -1578,7 +1633,7 @@ footer{
   .goods-grid-item p { font-size: 36px; }
 
   /* ---- Yuri Gallery ---- */
-  #yuri-gallery h2 { font-size: 42px; }
+  #yuri-gallery h2 { font-size: 42px; padding-top: 120px; }
   .gallery-grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -1589,7 +1644,7 @@ footer{
   }
 
   /* ---- News/Events ---- */
-  #inside-community h2 { font-size: 42px; }
+  #inside-community h2 { font-size: 42px; padding-top: 120px; }
   #inside-community p { font-size: 16px; }
   .newsevent > h3 { font-size: 28px; }
   .newsevent-grid-container {
@@ -1604,16 +1659,17 @@ footer{
   #facebook-community a { width: 60%; top: 60%; }
 
   /* ---- Contact Form ---- */
-  #contactForm { padding: 15% 5% 10%; }
+  #contactForm { padding: 120px 5% 10%; }
   .contactForm-contain { padding: 6%; }
   .contactForm-contain h2 { font-size: 28px; letter-spacing: 4px; }
   .contactForm-contain p { margin-bottom: 40px; }
   .contactForm-name { flex-direction: column; }
   .firstName,
   .lastName { width: 100%; padding-right: 0; }
-  .contactForm-Country select { width: 100%; }
+  .contactForm-Country select { width: 100%; box-sizing: border-box; }
 
   /* ---- Login ---- */
+  #login { background-image: none; background-color: #F3EEE8; }
   .login-content {
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1624,6 +1680,7 @@ footer{
   .submit-btn input[type="submit"] { width: 60%; }
 
   /* ---- Sign Up ---- */
+  #signup { background-image: none; background-color: #F3EEE8; }
   .signup-content {
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1634,13 +1691,13 @@ footer{
 
   /* ---- About Me page ---- */
   #aboutMe { height: auto; padding-bottom: 60px; }
-  .aboutMe-title { padding-top: 15%; }
+  .aboutMe-title { padding-top: 120px; }
   .aboutMe-title h2 { font-size: 48px; }
   .aboutMe-content {
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    gap: 30px;
+    margin-top: 50px;
+    gap: 50px;
   }
   .aboutMe-content img {
     width: 50%;
@@ -1689,7 +1746,7 @@ footer{
   .skill-3 i { margin-left: 20px; }
 
   /* ---- Commission ---- */
-  .commission-cotainer > h2 { font-size: 36px; }
+  .commission-cotainer > h2 { font-size: 36px; padding-top: 120px; }
   .commission-cotainer ul {
     flex-direction: column;
     gap: 50px;
@@ -1726,11 +1783,12 @@ footer{
   }
   #check-community {
     height: auto;
-    flex-direction: column;
+    display: block;
     padding: 30px 20px;
-    gap: 20px;
     text-align: center;
   }
+  #check-community h2 { text-align: center !important; width: 100%; margin: 0 0 20px 0; }
+  #check-community a { display: inline-block; }
   #check-community p { font-size: 20px; }
 }
 
@@ -1765,7 +1823,7 @@ footer{
   /* Info */
   .info-conatct h2 { font-size: 36px; }
   .info-btn,
-  .info-btn2 { width: 90%; }
+  .info-btn2 { width: max-content; }
 
   /* Footer */
   .footer-info h1 { font-size: 28px; }
