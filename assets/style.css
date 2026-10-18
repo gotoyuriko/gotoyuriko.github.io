@@ -72,6 +72,31 @@ img {
 
 
 
+/* ====================================================== NEW SITE NOTICE ====================================================== */
+.new-site-notice{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 10px 16px;
+  background: #B60033;
+  color: #F3EEE8;
+  text-align: center;
+  font-size: 16px;
+}
+.new-site-notice a{
+  color: #F3EEE8;
+  text-decoration: underline;
+}
+body{
+  padding-bottom: 60px; /* keep the footer visible above the fixed notice */
+}
+
+
+
+
+
 /* ====================================================== BURGUR MENU ====================================================== */
 .overlay { /* fullscreen */
   position: fixed;
